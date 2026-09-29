@@ -4,15 +4,30 @@
 
 @layer base{
     @font-face {
-        font-family: 'iran';
-        src: url("../font/iran.ttf") format('truetype');
+        font-family: "Yekan Bakh";
+        src: url("../font/YekanBakh4 Pro/FarsiNum/webfonts/woff2/YekanBakhFaNum-Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
     }
-    .font-iran{
-        font-family: 'iran', sans-serif;
+    @font-face {
+        font-family: "Yekan Bakh";
+        src: url("../font/YekanBakh4 Pro/FarsiNum/webfonts/woff2/YekanBakhFaNum-SemiBold.woff2") format("woff2");
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Yekan Bakh";
+        src: url("../font/YekanBakh4 Pro/FarsiNum/webfonts/woff2/YekanBakhFaNum-Bold.woff2") format("woff2");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
     }
 }
 
 @theme {
+    --font-yekan: "Yekan Bakh", sans-serif;
     --color-golde: rgb(124, 111, 85) ;
     --color-goold: rgb(100, 89, 68);
 }
@@ -26,7 +41,7 @@
         @apply justify-center items-center ;
     }
     .btn{
-        @apply  text-white w-32 rounded-lg bg-golde;
+        @apply text-white rounded-md bg-golde text-sm;
     }
     .after1{
         @apply after:content-[''] after:flex after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[#24242449] ;
